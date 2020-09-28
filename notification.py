@@ -4,7 +4,7 @@ from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-MY_ADDRESS = 'uningenieromas@yahoo.com'
+MY_ADDRESS = 'imdb.investing@gmail.com'
 PASSWORD = 'Tegustamipassword?'
 
 def get_contacts(filename):
@@ -37,8 +37,11 @@ def send_email(x):
 
     # set up the SMTP server
     s = smtplib.SMTP(host=config.smtp_host, port=config.smtp_port)
+    print("s")
     s.starttls()
+    print("starttls")
     s.login(MY_ADDRESS, PASSWORD)
+    print("login")
 
     # For each contact, send the email:
     for name, email in zip(names, emails):

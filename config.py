@@ -25,6 +25,6 @@ data_location = 'C:/Users/ignac/pyprojects/Investing_daily/Data/'
 
 """ NOTIFICATION.PY """
 # SMTP server host
-smtp_host = 'smtp.mail.yahoo.com'
+smtp_host = 'smtp.gmail.com'
 # SMTP server port
-smtp_port = 465
+smtp_port = 587

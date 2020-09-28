@@ -1,0 +1,10 @@
+Dear ${PERSON_NAME},
+
+Our program just found a signal of a turning candlestick in: ${STOCK_ABBV}.
+We strongly recommend you to read about this company, here is a small description of it:
+
+${STOCK_INFO}
+
+You can find more information in ${STOCK_URL}
+
+Thank you for your confidence in this method.

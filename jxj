@@ -1,0 +1,35 @@
+[33mcommit 62ddd75383dd553a0560d73c3318c85acca26cc5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ignacio <ignaciomdb@hotmail.com>
+Date:   Mon Sep 28 16:55:53 2020 +0200
+
+    Funciona con falsos positivos en velas de giro
+
+[33mcommit 76586b794ade19ae506666d046a82b1242836881[m
+Author: Ignacio <ignaciomdb@hotmail.com>
+Date:   Mon Sep 28 14:47:00 2020 +0200
+
+    Funciona notificación, falta testear las condiciones del if en get_data
+
+[33mcommit 9f9fcade8f0248cf9bb769ec9ec09ce4d14fb8a4[m
+Author: Ignacio <ignaciomdb@hotmail.com>
+Date:   Mon Sep 28 12:19:04 2020 +0200
+
+    Descripción de la actualización
+
+[33mcommit 9bb180efbc43d101fa836530135f26b55297e37d[m
+Author: Ignacio <ignaciomdb@hotmail.com>
+Date:   Fri Sep 25 22:35:20 2020 +0200
+
+    Previo a hacer funciones
+
+[33mcommit 2957153b1c0eb83355d5cffd1a5a913c80bb899b[m
+Author: Ignacio <ignaciomdb@hotmail.com>
+Date:   Fri Sep 25 20:21:49 2020 +0200
+
+    get_data guarda datos en csv
+
+[33mcommit 92ff12ea955dd97863e7885123911e91a2ce4c1f[m
+Author: Debujo <47425642+Debujo@users.noreply.github.com>
+Date:   Fri Sep 25 20:12:26 2020 +0200
+
+    Create README.md

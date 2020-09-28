@@ -32,7 +32,7 @@ def get_stocks_data():
         mean2_simple = mean2_df.Close.mean() # Short term mean
 
         if (mean1_simple >= mean2_simple) & ((stock.Close[n_days-1]/stock.Open[n_days-2]) >= config.turn_up_percentage) & ((stock.Open[n_days-1]-stock.Close[n_days-1]) >= 0):
-            notification.send_email(x)  #Send Alert notification()
             print("TURNING STOCK: " + x +"!")
+            notification.send_email(x)  #Send Alert notification()
         csv_save(x)
 get_stocks_data()

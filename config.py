@@ -12,7 +12,7 @@ from_date = "01/01/2018"
 # Number of days to calculate the mean
 moving_average =  68
 # Percentage required for the turning up candlestick
-turn_up_percentage = 1.01
+turn_up_percentage = 1.02
 # Country where the stocks you want are located
 country_name = 'United States'
 # Default language

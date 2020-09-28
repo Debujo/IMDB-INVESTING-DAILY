@@ -37,11 +37,8 @@ def send_email(x):
 
     # set up the SMTP server
     s = smtplib.SMTP(host=config.smtp_host, port=config.smtp_port)
-    print("s")
     s.starttls()
-    print("starttls")
     s.login(MY_ADDRESS, PASSWORD)
-    print("login")
 
     # For each contact, send the email:
     for name, email in zip(names, emails):
@@ -52,9 +49,8 @@ def send_email(x):
     url = str(description['url'])
     info = str(description['desc'])
     message = message_template.substitute(PERSON_NAME=name.title(), STOCK_ABBV=str(x), STOCK_URL=url , STOCK_INFO=info)
-
     # Prints out the message body for our sake
-    print(message)
+    #print(message)
 
     # setup the parameters of the message
     msg['From']=MY_ADDRESS

@@ -1,19 +1,6 @@
 import investpy, datetime, time, config, os, notification, math, rsi
 import pandas as pd
 
-t = time.time()
-today = datetime.date.today()
-print(today)
-date = str(today.day) + "/" + str(today.month) + "/" + str(today.year)
-mean_datetime = today - datetime.timedelta(days = config.moving_average)
-mean_date = str(mean_datetime.day) + "/" + str(mean_datetime.month) + "/" + str(mean_datetime.year)
-
-stocks = investpy.get_stocks_list(country = config.country_name)
-#print(stocks[0:100]) # NASDAQ
-stocks = stocks[0:620]
-#print(stocks[300:600]) # NASDAQ + SP500
-#print(len(stocks)) #4582*25kb = 120Mb en csv
-
 def csv_save(x):
     name = str(x + "_data.csv")
     if config.csv_save == True:
@@ -50,6 +37,27 @@ def get_stocks_data():
                     notification.send_email(x)  #Send Alert notification()
         csv_save(x)
 
-get_stocks_data()
-elapsed = time.time() - t
-print("ELAPSED TIME: " + str(elapsed))
+
+while True:
+    cronometro = datetime.datetime.today()
+    if cronometro.hour != 21:
+        print(str(cronometro.hour) + ":" + str(cronometro.minute) + " ===> Esperando a las 21 para ejecutar")
+        time.sleep(1800) #Check cada media hora
+
+    else:
+        t = time.time()
+        today = datetime.date.today()
+        print(today)
+        date = str(today.day) + "/" + str(today.month) + "/" + str(today.year)
+        mean_datetime = today - datetime.timedelta(days = config.moving_average)
+        mean_date = str(mean_datetime.day) + "/" + str(mean_datetime.month) + "/" + str(mean_datetime.year)
+
+        stocks = investpy.get_stocks_list(country = config.country_name)
+        #print(stocks[0:100]) # NASDAQ
+        stocks = stocks[0:620]
+        #print(stocks[300:600]) # NASDAQ + SP500
+        #print(len(stocks)) #4582*25kb = 120Mb en csv
+
+        get_stocks_data()
+        elapsed = time.time() - t
+        print("ELAPSED TIME: " + str(elapsed))

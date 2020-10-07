@@ -20,7 +20,7 @@ language = 'english'
 # Saves all data in different csv (True / False)
 csv_save = False
 # Location of the saved csv_save
-data_location = 'C:/Users/ignac/pyprojects/Investing_daily/Data/'
+data_location = 'C:/Users/ignac/pyprojects/IMDB-INVESTING-DAILY/Data/'
 
 
 """ NOTIFICATION.PY """

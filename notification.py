@@ -55,7 +55,7 @@ def send_email(x):
     # setup the parameters of the message
     msg['From']=MY_ADDRESS
     msg['To']=email
-    msg['Subject']= str("TURNING STOCK: " + x )
+    msg['Subject']= str("DAILY TURNING STOCK: " + x )
 
     # add in the message body
     msg.attach(MIMEText(message, 'plain'))
